@@ -1,0 +1,36 @@
+name: Build MPR SQUAD APK
+
+on:
+  workflow_dispatch:
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Java
+        uses: actions/setup-java@v4
+        with:
+          distribution: temurin
+          java-version: '17'
+
+      - name: Extract Project
+        run: |
+          mkdir -p project
+          unzip -q MPR_SQUAD_Android_Project.zip -d project
+          find project -name gradlew -type f
+
+      - name: Build APK
+        run: |
+          cd project
+          chmod +x gradlew
+          ./gradlew assembleDebug
+
+      - name: Save APK
+        uses: actions/upload-artifact@v4
+        with:
+          name: MPR-SQUAD-APK
+          path: project/**/app/build/outputs/apk/debug/*.apk
