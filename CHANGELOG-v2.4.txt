@@ -1,0 +1,13 @@
+MPR SQUAD P.C.S WORK DETAILS — v2.4
+
+v2.4 visual update
+- Added Maroon & Gold theme across app interface, forms, cards, buttons, folders, tables, navigation, profile panel and lock screen.
+- Maroon & Gold is selected for existing installations that were still using the original default theme; a user's later theme choice is preserved.
+- Added screen exit animation as well as the existing screen entry animation; navigation now fades/slides out before the next screen enters.
+- Kept reduced-motion accessibility support.
+- Preserved the original Local Storage key and all existing data structures.
+
+Verification
+- JavaScript syntax and ZIP integrity checks are required after packaging.
+- Android APK compilation and real-device testing have not been performed in this environment.
+- Existing original MPR logo artwork remains in its original navy/gold design; the selectable Maroon theme recolors the app interface, not the embedded logo image.

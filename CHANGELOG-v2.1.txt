@@ -1,0 +1,15 @@
+MPR SQUAD P.C.S Work Details — v2.1 change notes
+
+Added: Person-by-person actual expense/payment ledger.
+- Record date, expense category (outbound/return rickshaw, other transport, food, other), payer name, who/work the expense is for, amount, location, and note.
+- Automatic totals show how much each named payer actually paid.
+- Ledger records can be edited (payer, amount, note) or deleted.
+- Existing data key remains unchanged and the new ledger array is initialized safely for existing installs.
+
+Important accounting rule:
+- No equal splitting, no automatic allocation, and no automatic debt/reimbursement calculation.
+- Record actual amounts and actual payer only. The "for whom/work" field is descriptive, not a calculated share.
+
+Validation:
+- JavaScript syntax check passed with Node.js.
+- Android Gradle/APK compilation and real-device testing have not been performed in this environment.
